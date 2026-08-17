@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pulse — case study by YOUR NAME, creative developer.">
+    <title>Pulse — Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (theme !== "dark" && theme !== "light") {
+                theme = "dark";
+                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloader-name">PRIX</div>
+        <div class="preloader-count">00</div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="transition-overlay"></div>
+    <div class="theme-overlay"></div>
+    <div class="scroll-progress"><div class="bar"></div></div>
+    <div class="noise"></div>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">PRIX©</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Index</a>
+            <a href="work.html" class="nav-link is-current">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu" aria-expanded="false">
+                <span class="dot" aria-hidden="true"></span>
+                <span class="label">Menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+            <a href="index.html"><span class="num">01</span><span class="label">Index</span></a>
+            <a href="work.html" class="is-current"><span class="num">02</span><span class="label">Work</span></a>
+            <a href="about.html"><span class="num">03</span><span class="label">About</span></a>
+            <a href="contact.html"><span class="num">04</span><span class="label">Contact</span></a>
+        </nav>
+        <div class="mobile-menu-social">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@yourname.com">Email</a>
+        </div>
+    </div>
+
+    <main>
+        <header class="page-hero">
+            <div class="page-hero-tag">(Case Study)</div>
+            <h1 class="page-hero-title">
+                <span class="line"><span class="line-inner">Pulse</span></span>
+            </h1>
+        </header>
+
+        <section class="container">
+            <div class="meta-grid" data-reveal>
+                <div class="meta-item">
+                    <div class="m-label">Year</div>
+                    <div class="m-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="m-label">Role</div>
+                    <div class="m-value">Front-End Developer</div>
+                </div>
+                <div class="meta-item">
+                    <div class="m-label">Stack</div>
+                    <div class="m-value">React · TypeScript · Node.js</div>
+                </div>
+                <div class="meta-item">
+                    <div class="m-label">Link</div>
+                    <div class="m-value"><a href="#" class="nav-link">Live Site ↗</a></div>
+                </div>
+            </div>
+
+            <div class="prose" data-split>
+                <p class="lead">Pulse is a SaaS analytics platform for product teams — dashboards that make dense data feel calm instead of overwhelming.</p>
+            </div>
+
+            <div class="prose muted" data-reveal>
+                <p>The hard part wasn't the charts — it was restraint. I built a component system where every visualization shares one visual language: a single type scale, a strict grayscale palette, and consistent empty and loading states. Data reads clearly, and motion guides the eye instead of distracting it.</p>
+                <p>Behind the scenes, Pulse processes thousands of events per day through a Node.js API. I owned the front end end-to-end: real-time updates over WebSockets, virtualized tables for large datasets, and an accessibility pass that made every chart navigable by keyboard.</p>
+            </div>
+
+            <div class="media-block" data-reveal>
+                <div class="media"><img src="assets/images/pulse-saas.svg" alt="Pulse landing page" loading="lazy"></div>
+                <div class="media-caption">Fig. 01 — Landing page</div>
+            </div>
+
+            <div class="prose" data-reveal>
+                <p>Motion was used sparingly but deliberately. GSAP's ScrollTrigger drives the narrative on the marketing site, while in the app itself every transition shares a single easing curve — so the product feels cohesive, predictable, alive without being noisy.</p>
+            </div>
+
+            <div class="media-block" data-reveal>
+                <div class="media"><img src="assets/images/pulse-dashboard.svg" alt="Pulse analytics dashboard" loading="lazy"></div>
+                <div class="media-caption">Fig. 02 — Analytics dashboard</div>
+            </div>
+
+            <div class="prose muted" data-reveal>
+                <p>The most satisfying fix was invisible: replacing a janky table re-render with a virtualized list cut interaction lag from 200 ms to under 16 ms. Users didn't notice — and that was exactly the point.</p>
+            </div>
+        </section>
+
+        <!-- Next project -->
+        <section class="container">
+            <div class="next-project">
+                <div class="next-label">(Next Project)</div>
+                <a href="nova.html" class="next-title">
+                    <span>Nova</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <div class="footer-cta-label">Have a project in mind?</div>
+                <a href="contact.html" class="footer-cta">Let's Talk</a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Index</a>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 PRIX</span>
+            <span>Creative Developer</span>
+            <a href="#" class="top-link" id="topLink">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

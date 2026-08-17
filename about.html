@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About YOUR NAME — creative developer.">
+    <title>About — PRIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (theme !== "dark" && theme !== "light") {
+                theme = "dark";
+                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloader-name">PRIX</div>
+        <div class="preloader-count">00</div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="transition-overlay"></div>
+    <div class="theme-overlay"></div>
+    <div class="scroll-progress"><div class="bar"></div></div>
+    <div class="noise"></div>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">PRIX©</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Index</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link is-current">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu" aria-expanded="false">
+                <span class="dot" aria-hidden="true"></span>
+                <span class="label">Menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+            <a href="index.html"><span class="num">01</span><span class="label">Index</span></a>
+            <a href="work.html"><span class="num">02</span><span class="label">Work</span></a>
+            <a href="about.html" class="is-current"><span class="num">03</span><span class="label">About</span></a>
+            <a href="contact.html"><span class="num">04</span><span class="label">Contact</span></a>
+        </nav>
+        <div class="mobile-menu-social">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@yourname.com">Email</a>
+        </div>
+    </div>
+
+    <main>
+        <header class="page-hero">
+            <div class="page-hero-tag">(About Me)</div>
+            <h1 class="page-hero-title">
+                <span class="line"><span class="line-inner">About</span></span>
+            </h1>
+        </header>
+
+        <section class="section">
+            <p class="bio" data-split>
+                <span class="muted">Creative developer</span> with a design eye — I turn ideas into <span class="outline">fast,</span> accessible web experiences and obsess over the <span class="underline">details.</span>
+            </p>
+
+            <div class="prose muted" data-reveal>
+                <p>I fell into the web a couple of years ago and haven't looked back. Since then I've shipped marketing sites, SaaS dashboards and interactive experiences for startups, studios and indie founders — and I'm slowly building my own component library so I can work faster and cleaner. I care about the invisible 90%: semantics, performance budgets, animation timing, and the thousand small decisions that make software feel considered.</p>
+                <p>Right now I'm deep in motion — GSAP timelines, scroll-driven storytelling, WebGL experiments — and getting more fluent in React and TypeScript by the week. When I'm not shipping, I'm breaking things on purpose and writing about what I learn.</p>
+            </div>
+
+            <!-- Skills -->
+            <div class="skills" data-reveal>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">GSAP</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Tailwind</span>
+                <span class="skill-tag">WebGL</span>
+                <span class="skill-tag">Accessibility</span>
+                <span class="skill-tag">SEO</span>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="tl-row" data-reveal>
+                    <span class="tl-year">2025 — Now</span>
+                    <div>
+                        <h3 class="tl-role">Creative Developer — Studio</h3>
+                        <p class="tl-desc">Building marketing sites, dashboards and interactive experiences for clients. Owning motion, performance and accessibility on every project.</p>
+                    </div>
+                </div>
+                <div class="tl-row" data-reveal>
+                    <span class="tl-year">2024 — 2025</span>
+                    <div>
+                        <h3 class="tl-role">Freelance Developer</h3>
+                        <p class="tl-desc">Shipped portfolio sites and small web apps for local businesses and indie founders. Learned to scope, build and deliver end-to-end.</p>
+                    </div>
+                </div>
+                <div class="tl-row" data-reveal>
+                    <span class="tl-year">2023 — 2024</span>
+                    <div>
+                        <h3 class="tl-role">Self-Taught</h3>
+                        <p class="tl-desc">Fell in love with the web and started building. Went from a first HTML page to GSAP-powered sites — and a React app or two.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <div class="footer-cta-label">Have a project in mind?</div>
+                <a href="contact.html" class="footer-cta">Let's Talk</a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Index</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 PRIX</span>
+            <span>Creative Developer</span>
+            <a href="#" class="top-link" id="topLink">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

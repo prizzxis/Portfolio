@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#101010"/>
+
+  <!-- Soft glow -->
+  <circle cx="800" cy="450" r="380" fill="url(#glow)"/>
+
+  <!-- Particle field -->
+  <g fill="#EDEDED">
+    <circle cx="180" cy="160" r="3" opacity="0.4"/><circle cx="300" cy="90" r="2" opacity="0.3"/>
+    <circle cx="420" cy="210" r="3.5" opacity="0.5"/><circle cx="540" cy="120" r="2.5" opacity="0.35"/>
+    <circle cx="660" cy="240" r="3" opacity="0.45"/><circle cx="760" cy="140" r="2" opacity="0.3"/>
+    <circle cx="880" cy="260" r="3.5" opacity="0.5"/><circle cx="990" cy="150" r="2.5" opacity="0.35"/>
+    <circle cx="1110" cy="220" r="3" opacity="0.4"/><circle cx="1230" cy="120" r="2" opacity="0.3"/>
+    <circle cx="1350" cy="200" r="3.5" opacity="0.5"/><circle cx="1460" cy="130" r="2.5" opacity="0.35"/>
+    <circle cx="160" cy="700" r="2.5" opacity="0.35"/><circle cx="280" cy="780" r="3" opacity="0.45"/>
+    <circle cx="410" cy="680" r="2" opacity="0.3"/><circle cx="530" cy="790" r="3.5" opacity="0.5"/>
+    <circle cx="650" cy="700" r="2.5" opacity="0.35"/><circle cx="780" cy="760" r="3" opacity="0.4"/>
+    <circle cx="900" cy="690" r="2" opacity="0.3"/><circle cx="1030" cy="780" r="3.5" opacity="0.5"/>
+    <circle cx="1150" cy="710" r="2.5" opacity="0.35"/><circle cx="1280" cy="770" r="3" opacity="0.45"/>
+    <circle cx="1400" cy="700" r="2" opacity="0.3"/><circle cx="1500" cy="790" r="3.5" opacity="0.5"/>
+    <circle cx="240" cy="420" r="2" opacity="0.3"/><circle cx="1360" cy="430" r="2" opacity="0.3"/>
+    <circle cx="150" cy="430" r="2.5" opacity="0.35"/><circle cx="1450" cy="450" r="2.5" opacity="0.35"/>
+  </g>
+
+  <!-- Wireframe torus -->
+  <ellipse cx="800" cy="450" rx="240" ry="110" fill="none" stroke="#EDEDED" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="800" cy="450" rx="240" ry="110" fill="none" stroke="#EDEDED" stroke-width="1" opacity="0.25" transform="rotate(18 800 450)"/>
+  <ellipse cx="800" cy="450" rx="240" ry="110" fill="none" stroke="#EDEDED" stroke-width="1" opacity="0.25" transform="rotate(-18 800 450)"/>
+  <circle cx="800" cy="450" r="14" fill="#EDEDED"/>
+  <circle cx="800" cy="340" r="7" fill="#EDEDED" opacity="0.8"/>
+  <circle cx="1040" cy="450" r="6" fill="#EDEDED" opacity="0.6"/>
+
+  <!-- Flowing curves -->
+  <path d="M60 620 C 320 520, 500 700, 780 560 S 1300 380, 1540 460" fill="none" stroke="#EDEDED" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+  <path d="M80 660 C 340 570, 520 740, 800 600 S 1320 420, 1540 500" fill="none" stroke="#EDEDED" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+
+  <!-- Grid hint bottom-left -->
+  <g stroke="#262626" stroke-width="1">
+    <line x1="60" y1="820" x2="300" y2="820"/>
+    <line x1="60" y1="800" x2="300" y2="800"/>
+    <line x1="60" y1="780" x2="300" y2="780"/>
+    <line x1="60" y1="800" x2="60" y2="820"/>
+    <line x1="120" y1="800" x2="120" y2="820"/>
+    <line x1="180" y1="800" x2="180" y2="820"/>
+    <line x1="240" y1="800" x2="240" y2="820"/>
+    <line x1="300" y1="800" x2="300" y2="820"/>
+  </g>
+  <rect x="330" y="792" width="160" height="10" rx="5" fill="#5c5c5c"/>
+  <rect x="330" y="812" width="110" height="8" rx="4" fill="#363636"/>
+
+  <!-- Stats top-right -->
+  <rect x="1280" y="80" width="240" height="13" rx="5" fill="#EDEDED" opacity="0.85"/>
+  <rect x="1280" y="106" width="180" height="9" rx="4" fill="#5c5c5c"/>
+
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EDEDED" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#EDEDED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

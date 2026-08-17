@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#101010"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1600" height="90" fill="#141414"/>
+  <line x1="0" y1="90" x2="1600" y2="90" stroke="#222" stroke-width="1"/>
+  <polygon points="44,45 28,45 36,55" fill="#EDEDED"/>
+  <rect x="60" y="40" width="110" height="12" rx="5" fill="#EDEDED"/>
+  <rect x="700" y="36" width="200" height="18" rx="6" fill="#EDEDED"/>
+  <rect x="1390" y="34" width="24" height="24" rx="12" fill="none" stroke="#EDEDED" stroke-width="2"/>
+  <path d="M1402 44 l8 8 M1402 52 l8 -8" stroke="#EDEDED" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Left: form -->
+  <rect x="80" y="150" width="52" height="9" rx="4" fill="#5c5c5c"/>
+  <rect x="80" y="190" width="700" height="13" rx="5" fill="#EDEDED"/>
+
+  <rect x="80" y="240" width="700" height="180" rx="12" fill="#161616" stroke="#262626"/>
+  <rect x="104" y="266" width="120" height="11" rx="5" fill="#EDEDED"/>
+  <rect x="104" y="300" width="652" height="46" rx="10" fill="none" stroke="#2c2c2c"/>
+  <rect x="124" y="318" width="180" height="10" rx="4" fill="#4a4a4a"/>
+  <rect x="104" y="362" width="312" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="124" y="380" width="140" height="10" rx="4" fill="#6f6f6f"/>
+  <rect x="444" y="362" width="312" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="464" y="380" width="120" height="10" rx="4" fill="#6f6f6f"/>
+
+  <rect x="80" y="446" width="700" height="180" rx="12" fill="#161616" stroke="#262626"/>
+  <rect x="104" y="472" width="150" height="11" rx="5" fill="#EDEDED"/>
+  <rect x="104" y="506" width="312" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="124" y="524" width="170" height="10" rx="4" fill="#6f6f6f"/>
+  <rect x="444" y="506" width="312" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="464" y="524" width="150" height="10" rx="4" fill="#6f6f6f"/>
+  <rect x="104" y="568" width="204" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="124" y="586" width="100" height="10" rx="4" fill="#6f6f6f"/>
+  <rect x="336" y="568" width="420" height="46" rx="10" fill="#1c1c1c"/>
+  <rect x="356" y="586" width="220" height="10" rx="4" fill="#6f6f6f"/>
+
+  <!-- Right: summary -->
+  <rect x="840" y="240" width="680" height="560" rx="12" fill="#161616" stroke="#262626"/>
+  <rect x="868" y="266" width="160" height="13" rx="5" fill="#EDEDED"/>
+  <g>
+    <rect x="868" y="310" width="90" height="90" rx="8" fill="url(#patS)"/>
+    <rect x="984" y="320" width="240" height="12" rx="5" fill="#EDEDED"/>
+    <rect x="984" y="348" width="160" height="9" rx="4" fill="#5c5c5c"/>
+    <rect x="984" y="372" width="100" height="11" rx="5" fill="#EDEDED" opacity="0.8"/>
+    <rect x="1428" y="326" width="52" height="18" rx="6" fill="#EDEDED"/>
+  </g>
+  <g>
+    <rect x="868" y="424" width="90" height="90" rx="8" fill="url(#patT)"/>
+    <rect x="984" y="434" width="210" height="12" rx="5" fill="#EDEDED"/>
+    <rect x="984" y="462" width="140" height="9" rx="4" fill="#5c5c5c"/>
+    <rect x="984" y="486" width="90" height="11" rx="5" fill="#EDEDED" opacity="0.8"/>
+    <rect x="1428" y="440" width="52" height="18" rx="6" fill="#EDEDED"/>
+  </g>
+  <line x1="868" y1="546" x2="1492" y2="546" stroke="#262626" stroke-width="1"/>
+  <g fill="#6f6f6f">
+    <rect x="868" y="578" width="100" height="10" rx="4"/>
+    <rect x="868" y="614" width="130" height="10" rx="4"/>
+  </g>
+  <rect x="868" y="614" width="60" height="10" rx="4" fill="#8a8a8a"/>
+  <line x1="868" y1="656" x2="1492" y2="656" stroke="#262626" stroke-width="1"/>
+  <rect x="868" y="686" width="140" height="26" rx="6" fill="#EDEDED"/>
+  <rect x="1340" y="686" width="152" height="26" rx="6" fill="#EDEDED"/>
+  <rect x="868" y="742" width="624" height="52" rx="26" fill="#EDEDED"/>
+  <rect x="1120" y="760" width="120" height="12" rx="5" fill="#101010"/>
+
+  <defs>
+    <pattern id="patS" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="30" height="30" fill="#1d1d1d"/>
+      <line x1="0" y1="0" x2="0" y2="30" stroke="#2a2a2a" stroke-width="1"/>
+    </pattern>
+    <pattern id="patT" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#1b1b1b"/>
+      <circle cx="13" cy="13" r="1.6" fill="#3a3a3a"/>
+    </pattern>
+  </defs>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#101010"/>
+
+  <!-- Nav -->
+  <rect x="0" y="0" width="1200" height="90" fill="#141414"/>
+  <rect x="0" y="88" width="1200" height="2" fill="#222"/>
+  <rect x="40" y="34" width="26" height="26" rx="4" fill="#EDEDED"/>
+  <rect x="80" y="40" width="110" height="14" rx="4" fill="#EDEDED"/>
+  <g fill="#6f6f6f">
+    <rect x="700" y="41" width="44" height="9" rx="4"/>
+    <rect x="770" y="41" width="60" height="9" rx="4"/>
+    <rect x="856" y="41" width="52" height="9" rx="4"/>
+    <rect x="934" y="41" width="70" height="9" rx="4"/>
+  </g>
+  <rect x="1040" y="26" width="120" height="38" rx="19" fill="#EDEDED"/>
+  <rect x="1072" y="41" width="56" height="9" rx="4" fill="#101010"/>
+
+  <!-- Hero banner -->
+  <rect x="40" y="130" width="1120" height="280" rx="14" fill="#171717" stroke="#262626"/>
+  <rect x="80" y="170" width="120" height="10" rx="4" fill="#6f6f6f"/>
+  <rect x="80" y="200" width="520" height="52" rx="8" fill="#EDEDED"/>
+  <rect x="80" y="266" width="360" height="16" rx="6" fill="#EDEDED" opacity="0.55"/>
+  <rect x="80" y="336" width="150" height="44" rx="22" fill="#EDEDED"/>
+  <rect x="110" y="354" width="90" height="9" rx="4" fill="#101010"/>
+  <!-- Decorative blocks on the right of banner -->
+  <rect x="760" y="150" width="180" height="120" rx="10" fill="#1e1e1e"/>
+  <rect x="960" y="150" width="180" height="120" rx="10" fill="#1e1e1e"/>
+  <rect x="760" y="290" width="380" height="100" rx="10" fill="#1e1e1e"/>
+
+  <!-- Product grid -->
+  <g>
+    <rect x="40" y="450" width="360" height="400" rx="12" fill="#161616" stroke="#262626"/>
+    <rect x="56" y="466" width="328" height="240" rx="8" fill="url(#patA)"/>
+    <rect x="56" y="724" width="220" height="12" rx="5" fill="#EDEDED"/>
+    <rect x="56" y="752" width="140" height="10" rx="5" fill="#5c5c5c"/>
+    <rect x="56" y="794" width="90" height="16" rx="5" fill="#EDEDED" opacity="0.8"/>
+  </g>
+  <g>
+    <rect x="420" y="450" width="360" height="400" rx="12" fill="#161616" stroke="#262626"/>
+    <rect x="436" y="466" width="328" height="240" rx="8" fill="url(#patB)"/>
+    <rect x="436" y="724" width="190" height="12" rx="5" fill="#EDEDED"/>
+    <rect x="436" y="752" width="150" height="10" rx="5" fill="#5c5c5c"/>
+    <rect x="436" y="794" width="90" height="16" rx="5" fill="#EDEDED" opacity="0.8"/>
+  </g>
+  <g>
+    <rect x="800" y="450" width="360" height="400" rx="12" fill="#161616" stroke="#262626"/>
+    <rect x="816" y="466" width="328" height="240" rx="8" fill="url(#patC)"/>
+    <rect x="816" y="724" width="200" height="12" rx="5" fill="#EDEDED"/>
+    <rect x="816" y="752" width="130" height="10" rx="5" fill="#5c5c5c"/>
+    <rect x="816" y="794" width="90" height="16" rx="5" fill="#EDEDED" opacity="0.8"/>
+  </g>
+
+  <defs>
+    <pattern id="patA" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="48" height="48" fill="#1c1c1c"/>
+      <line x1="0" y1="0" x2="0" y2="48" stroke="#262626" stroke-width="1"/>
+    </pattern>
+    <pattern id="patB" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#1b1b1b"/>
+      <circle cx="13" cy="13" r="1.5" fill="#3a3a3a"/>
+    </pattern>
+    <pattern id="patC" width="36" height="36" patternUnits="userSpaceOnUse">
+      <rect width="36" height="36" fill="#1a1a1a"/>
+      <path d="M0 36 L36 0" stroke="#262626" stroke-width="1.5"/>
+      <path d="M-12 12 L12 -12 M24 48 L48 24" stroke="#262626" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+</svg>

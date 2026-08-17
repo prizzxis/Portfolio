@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOUR NAME — Creative Developer. Building fast, functional, award-worthy web experiences.">
+    <title>PRIX — Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (theme !== "dark" && theme !== "light") {
+                theme = "dark";
+                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Chrome: preloader, cursor, transition overlay, progress, noise -->
+    <div class="preloader">
+        <div class="preloader-name">PRIX</div>
+        <div class="preloader-count">00</div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="transition-overlay"></div>
+    <div class="theme-overlay"></div>
+    <div class="scroll-progress"><div class="bar"></div></div>
+    <div class="noise"></div>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">PRIX©</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link is-current">Index</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu" aria-expanded="false">
+                <span class="dot" aria-hidden="true"></span>
+                <span class="label">Menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+            <a href="index.html" class="is-current"><span class="num">01</span><span class="label">Index</span></a>
+            <a href="work.html"><span class="num">02</span><span class="label">Work</span></a>
+            <a href="about.html"><span class="num">03</span><span class="label">About</span></a>
+            <a href="contact.html"><span class="num">04</span><span class="label">Contact</span></a>
+        </nav>
+        <div class="mobile-menu-social">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@yourname.com">Email</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-tag"><span class="dot"></span> Available for freelance</div>
+            <h1 class="hero-title">
+                <span class="line"><span class="line-inner">PRIX</span></span>
+            </h1>
+            <div class="hero-meta">
+                <p class="hero-sub">I build <em>fast</em>, polished web experiences — marketing sites, web apps and the occasional interactive experiment — with a thing for motion and the details.</p>
+                <div class="hero-scroll">
+                    <span class="line-vert"></span>
+                    Scroll
+                </div>
+            </div>
+        </header>
+
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack"></div>
+        </div>
+
+        <!-- Intro -->
+        <section class="section">
+            <div class="section-head">
+                <span class="section-label">(About)</span>
+                <a href="about.html" class="section-label">More ↗</a>
+            </div>
+            <p class="bio" data-split>
+                <span class="muted">I'm a</span> creative developer <span class="muted">who turns</span> complex problems <span class="outline">into simple,</span> beautiful interfaces — <span class="underline">obsessed</span> with performance, motion &amp; the details.
+            </p>
+        </section>
+
+        <!-- Featured projects -->
+        <section class="section">
+            <div class="section-head">
+                <span class="section-label">(Selected Work)</span>
+                <a href="work.html" class="section-label">All projects ↗</a>
+            </div>
+            <div class="featured">
+                <a href="aurora.html" class="featured-item" data-reveal>
+                    <div class="featured-media"><div class="media"><img src="assets/images/aurora-dashboard.svg" alt="Aurora — analytics dashboard" loading="lazy"></div></div>
+                    <div class="featured-meta">
+                        <span class="featured-name">Aurora</span>
+                        <span class="featured-cat">Web App — 2025</span>
+                    </div>
+                </a>
+                <a href="monolith.html" class="featured-item" data-reveal>
+                    <div class="featured-media"><div class="media"><img src="assets/images/monolith-shop.svg" alt="Monolith — e-commerce storefront" loading="lazy"></div></div>
+                    <div class="featured-meta">
+                        <span class="featured-name">Monolith</span>
+                        <span class="featured-cat">E-Commerce — 2025</span>
+                    </div>
+                </a>
+                <a href="pulse.html" class="featured-item" data-reveal>
+                    <div class="featured-media"><div class="media"><img src="assets/images/pulse-saas.svg" alt="Pulse — SaaS platform landing page" loading="lazy"></div></div>
+                    <div class="featured-meta">
+                        <span class="featured-name">Pulse</span>
+                        <span class="featured-cat">SaaS — 2024</span>
+                    </div>
+                </a>
+                <a href="nova.html" class="featured-item" data-reveal>
+                    <div class="featured-media"><div class="media"><img src="assets/images/nova-interactive.svg" alt="Nova — interactive creative-coding piece" loading="lazy"></div></div>
+                    <div class="featured-meta">
+                        <span class="featured-name">Nova</span>
+                        <span class="featured-cat">Interactive — 2024</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section class="section">
+            <div class="section-head">
+                <span class="section-label">(Capabilities)</span>
+            </div>
+            <div class="cap-list">
+                <div class="cap-row" data-reveal>
+                    <span class="cap-num">/ 01</span>
+                    <div>
+                        <h3 class="cap-name">Front-End Development</h3>
+                        <p class="cap-desc">Pixel-perfect, accessible interfaces with semantic HTML, modern CSS and vanilla or framework JavaScript.</p>
+                    </div>
+                </div>
+                <div class="cap-row" data-reveal>
+                    <span class="cap-num">/ 02</span>
+                    <div>
+                        <h3 class="cap-name">Motion &amp; Interaction</h3>
+                        <p class="cap-desc">Buttery scroll animations, micro-interactions and page transitions with GSAP and ScrollTrigger.</p>
+                    </div>
+                </div>
+                <div class="cap-row" data-reveal>
+                    <span class="cap-num">/ 03</span>
+                    <div>
+                        <h3 class="cap-name">Performance &amp; SEO</h3>
+                        <p class="cap-desc">Core Web Vitals first. Fast loads, lazy assets, clean markup — the invisible work that wins.</p>
+                    </div>
+                </div>
+                <div class="cap-row" data-reveal>
+                    <span class="cap-num">/ 04</span>
+                    <div>
+                        <h3 class="cap-name">Creative Coding</h3>
+                        <p class="cap-desc">Interactive experiments, generative visuals and WebGL flourishes that make a site unforgettable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <div class="footer-cta-label">Have a project in mind?</div>
+                <a href="contact.html" class="footer-cta">Let's Talk</a>
+            </div>
+            <div class="footer-links">
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 YOUR NAME</span>
+            <span>Creative Developer</span>
+            <a href="#" class="top-link" id="topLink">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

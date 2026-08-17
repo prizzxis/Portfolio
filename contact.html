@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with PRIX — creative developer.">
+    <title>Contact — PRIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (theme !== "dark" && theme !== "light") {
+                theme = "dark";
+                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloader-name">PRIX</div>
+        <div class="preloader-count">00</div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="transition-overlay"></div>
+    <div class="theme-overlay"></div>
+    <div class="scroll-progress"><div class="bar"></div></div>
+    <div class="noise"></div>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">PRIX©</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Index</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link is-current">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu" aria-expanded="false">
+                <span class="dot" aria-hidden="true"></span>
+                <span class="label">Menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+            <a href="index.html"><span class="num">01</span><span class="label">Index</span></a>
+            <a href="work.html"><span class="num">02</span><span class="label">Work</span></a>
+            <a href="about.html"><span class="num">03</span><span class="label">About</span></a>
+            <a href="contact.html" class="is-current"><span class="num">04</span><span class="label">Contact</span></a>
+        </nav>
+        <div class="mobile-menu-social">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@yourname.com">Email</a>
+        </div>
+    </div>
+
+    <main>
+        <header class="contact-hero">
+            <div class="contact-hero-tag">(Contact)</div>
+            <a href="mailto:hello@yourname.com" class="contact-email">
+                hello@yourname.com
+                <span class="underline-anim"></span>
+                <span class="mail-icon">↗</span>
+            </a>
+
+            <div class="contact-lower">
+                <!-- Form (front-end only — wire to your backend/email service) -->
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="jane@company.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your project…"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message <span>→</span></button>
+                    <p class="form-success" id="formSuccess">Thanks — I'll get back to you within 48 hours. ✦</p>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-row">
+                        <span class="l">Elsewhere</span>
+                        <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                    <div class="info-row">
+                        <span class="l">Social</span>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    </div>
+                    <div class="info-row">
+                        <span class="l">Based In</span>
+                        <span>City, Country</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="l">Status</span>
+                        <span>Available for projects</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>© 2026 PRIX</span>
+            <span>Creative Developer</span>
+            <a href="#" class="top-link" id="topLink">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
